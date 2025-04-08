@@ -1,0 +1,9 @@
+{
+  "name": "shopware/docker-dev",
+  "type": "metapackage",
+  "license": "MIT",
+  "description": "Docker Configuration for Local Development",
+  "require": {
+    "shopware/core": ">=6.5.0.0"
+  }
+}
