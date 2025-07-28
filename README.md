@@ -13,26 +13,29 @@ This setup is ideal for plugin, app, or core development and ensures your develo
 
 ## Quick Start
 
-1. **Create a new Shopware project** (if you don’t have one yet):
+1. **Create a new folder**:
     ```
-    composer create-project shopware/production <my-project>
-    cd <my-project>
-    ```
-
-2. **Add the Docker meta package**:
-    ```
-    composer require shopware/docker
+    mkdir my-project
+    cd my-project
     ```
 
-    This will add the Docker setup to your project via Symfony Flex, including a Dockerfile and any required scripts.
+2. **Create new Shopware project**:
+    ```
+    docker run --rm -it -v $PWD:/var/www/html ghcr.io/shopwarelabs/devcontainer/base-slim:8.3 new-shopware-setup
+
+    # or specific version
+    docker run --rm -it -v $PWD:/var/www/html ghcr.io/shopwarelabs/devcontainer/base-slim:8.3 new-shopware-setup 6.6.10.0
+    ```
+
+    This will create a new Shopware project and create configuration files for docker compose.
 
 3. **Start the Docker environment**:
     ```
-    docker compose up -d
+    make up
     ```
 
 4. **Access your Shopware instance**:
-    - By default, your app is available at [http://localhost](http://localhost)
+    - By default, your app is available at [http://localhost:8000](http://localhost:8000)
 
 
 ## How It Works
@@ -57,8 +60,7 @@ This will automatically pull in the latest Docker configuration updates from Sho
 
 ## Documentation and Help
 
-- [Official Shopware Docker Guide](https://developer.shopware.com/docs/guides/hosting/installation-updates/docker.html)
-- [Shopware Production Docker Image](https://github.com/shopware/docker)
+- [Official Shopware Docker Guide](https://developer.shopware.com/docs/guides/installation/setups/docker.html)
 
 ## Contributing
 
