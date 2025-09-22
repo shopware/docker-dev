@@ -21,10 +21,10 @@ This setup is ideal for plugin, app, or core development and ensures your develo
 
 2. **Create new Shopware project**:
     ```
-    docker run --rm -it -v $PWD:/var/www/html ghcr.io/shopwarelabs/devcontainer/base-slim:8.3 new-shopware-setup
+    docker run --rm -it -v $PWD:/var/www/html ghcr.io/shopware/docker-dev:php8.3-node22-caddy new-shopware-setup
 
     # or specific version
-    docker run --rm -it -v $PWD:/var/www/html ghcr.io/shopwarelabs/devcontainer/base-slim:8.3 new-shopware-setup 6.6.10.0
+    docker run --rm -it -v $PWD:/var/www/html ghcr.io/shopware/docker-dev:php8.3-node22-caddy new-shopware-setup 6.6.10.0
     ```
 
     This will create a new Shopware project and create configuration files for docker compose.
