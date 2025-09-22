@@ -4,7 +4,6 @@
   "license": "MIT",
   "description": "Docker Configuration for Local Development",
   "require": {
-    "shopware/core": ">=6.5.0.0",
-    "league/flysystem-async-aws-s3": "*"
+    "shopware/core": ">=6.5.0.0"
   }
 }
